@@ -133,7 +133,18 @@ Updates an existing playlist.
   ```json
   {
     "name": "Updated Playlist Name",
-    "description": "Updated description."
+    "description": "Updated description.",
+    "tracks": [
+      {
+        "trackId": "asd1283908adjld",
+        "trackName": "Name of the track.",
+        "artistName": "John Doe",
+        "albumName": "Test Album",
+        "albumArt": "Test Art",
+        "duration": 21312,
+        "trackUrl": "https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b"
+      }
+    ]
   }
   ```
 - **Response:**
