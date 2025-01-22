@@ -5,7 +5,7 @@ const connect = require("./db/connect");
 const authRouter = require("./routes/authRoutes");
 const playlistRouter = require("./routes/playlistRoutes");
 
-const PORT = process.env.PORT || 5500;
+const PORT = process.env.PORT || 5000;
 const app = express();
 
 // Middlewares

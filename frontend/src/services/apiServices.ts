@@ -1,7 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+
+const BASE_URL = import.meta.env.VITE_BASE_URL_PRODUCTION;
+// const BASE_URL = import.meta.env.VITE_BASE_URL_DEVELOPMENT;
+
 // Auth
 export const login = async (data: { email: string; password: string }) => {
-  const response = await fetch("http://localhost:5000/auth/login", {
+  const response = await fetch(`${BASE_URL}/auth/login`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -18,7 +22,7 @@ export const register = async (data: {
   email: string;
   password: string;
 }) => {
-  const response = await fetch("http://localhost:5000/auth/register", {
+  const response = await fetch(`${BASE_URL}/auth/register`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -30,7 +34,7 @@ export const register = async (data: {
 };
 
 export const logout = async () => {
-  const response = await fetch("http://localhost:5000/auth/logout", {
+  const response = await fetch(`${BASE_URL}/auth/logout`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -43,7 +47,7 @@ export const logout = async () => {
 
 // Playlists
 export const getAllPlaylists = async () => {
-  const response = await fetch("http://localhost:5000/playlists", {
+  const response = await fetch(`${BASE_URL}/playlists`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -55,7 +59,7 @@ export const getAllPlaylists = async () => {
 };
 
 export const getPlaylistById = async (id: string) => {
-  const response = await fetch(`http://localhost:5000/playlists/${id}`, {
+  const response = await fetch(`${BASE_URL}/playlists/${id}`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -70,7 +74,7 @@ export const addPlaylist = async (data: {
   name: string;
   description: string;
 }) => {
-  const response = await fetch("http://localhost:5000/playlists", {
+  const response = await fetch(`${BASE_URL}/playlists`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -83,7 +87,7 @@ export const addPlaylist = async (data: {
 };
 
 export const updatePlaylist = async (id: string, data: any) => {
-  const response = await fetch(`http://localhost:5000/playlists/${id}`, {
+  const response = await fetch(`${BASE_URL}/playlists/${id}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
@@ -96,7 +100,7 @@ export const updatePlaylist = async (id: string, data: any) => {
 };
 
 export const deletePlaylist = async (id: string) => {
-  const response = await fetch(`http://localhost:5000/playlists/${id}`, {
+  const response = await fetch(`${BASE_URL}/playlists/${id}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",

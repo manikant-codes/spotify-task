@@ -6,7 +6,7 @@ const {
   getPlaylistById,
   updatePlaylist,
   deletePlaylist,
-} = require("../controllers/playListControllers");
+} = require("../controllers/playlistControllers");
 const playlistRouter = express.Router();
 
 playlistRouter.get("/", authMiddleware, getAllPlaylists);
