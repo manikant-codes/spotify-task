@@ -7,7 +7,7 @@ function LayoutAdmin() {
   return (
     <div>
       <NavbarAdmin />
-      <div className="grid grid-cols-[256px_1fr]">
+      <div className="grid grid-cols-1 md:grid-cols-[256px_1fr]">
         <SidebarAdmin />
         <div>
           <Outlet />

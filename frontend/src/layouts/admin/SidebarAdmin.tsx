@@ -14,7 +14,7 @@ function SidebarAdmin() {
   };
 
   return (
-    <div className="p-8 border-r border-r-gray-300">
+    <div className="md:block hidden p-8 border-r border-r-gray-300">
       <ul className="flex flex-col gap-4">
         <li>
           <Button
