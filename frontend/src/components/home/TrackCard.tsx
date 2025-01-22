@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Button } from "@mui/material";
 import { Dispatch, SetStateAction } from "react";
 
@@ -32,7 +33,7 @@ function TrackCard({
           <Button
             onClick={() => {
               toggleIsOpen();
-              setSelectedTrack(track);
+              setSelectedTrack(track as any);
             }}
             variant="contained"
             className="block !mt-4"
